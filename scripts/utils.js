@@ -3,7 +3,7 @@ const fs = require("fs");
 const CONFIG_FILE_NAME_PATH = "./exp.json";
 
 function getExpPublishName(packageName, branchName) {
-  return `${packageName}-${branchName}`.replace(/[^a-zA-Z0-9\\-]/, "-");
+  return `${packageName}-${branchName}`.replace(/[^a-zA-Z0-9\\-]/g, "-");
 }
 
 function readPackageJSON() {
