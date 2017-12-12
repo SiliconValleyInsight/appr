@@ -6,6 +6,10 @@ function getExpPublishName(packageName, branchName) {
   return `${packageName}-${branchName}`.replace(/[^a-zA-Z0-9\\-]/g, "-");
 }
 
+function getExpPublishName(packageName, githubPullRequestId) {
+  return `${packageName}-pr-${githubPullRequestId}`;
+}
+
 function readPackageJSON() {
   return JSON.parse(fs.readFileSync("./package.json"));
 }
