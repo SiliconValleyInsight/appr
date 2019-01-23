@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const CONFIG_FILE_NAME_PATH = process.env.EXPO_CONFIG_FILE_PATH || "./exp.json";
+const CONFIG_FILE_NAME_PATH = process.env.EXPO_CONFIG_FILE_PATH || "./app.json";
 
 // function getExpPublishName(packageName, branchName) {
 //   return `${packageName}-${branchName}`.replace(/[^a-zA-Z0-9\\-]/g, "-");
