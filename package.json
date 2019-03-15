@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "exp": "^46.0.5",
+    "expo-cli": "^2.11.9",
     "request": "^2.81.0"
   }
 }
