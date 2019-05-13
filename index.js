@@ -6,7 +6,7 @@ const log = require('./scripts/log');
 const preDeploy = require('./scripts/pre-deploy');
 const postDeploy = require('./scripts/post-deploy');
 const getExpChannelName = require('./scripts/utils').getExpChannelName;
-const localExp = './node_modules/exp-cli/bin/expo.js';
+const localExp = './node_modules/expo-cli/bin/expo.js';
 log('Logging into Expo...');
 spawn(
   localExp,
