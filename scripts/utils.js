@@ -1,4 +1,5 @@
 const fs = require("fs");
+const config = require('./config');
 
 const CONFIG_FILE_NAME_PATH = process.env.EXPO_CONFIG_FILE_PATH || "./app.json";
 
@@ -8,6 +9,13 @@ const CONFIG_FILE_NAME_PATH = process.env.EXPO_CONFIG_FILE_PATH || "./app.json";
 
 function getExpPublishName(packageName, githubPullRequestId) {
   return `${packageName}-pr-${githubPullRequestId}`;
+
+function getSafeName(name) {
+  return `${name}`.replace(/[^a-zA-Z0-9\\-]/, '-');
+}
+
+function getExpChannelName() {
+  return getSafeName(config.expReleaseChannel);
 }
 
 function readPackageJSON() {
@@ -27,7 +35,8 @@ function writeAppJSON(content) {
 }
 
 module.exports = {
-  getExpPublishName,
+  getSafeName,
+  getExpChannelName,
   readPackageJSON,
   writePackageJSON,
   readAppJSON,

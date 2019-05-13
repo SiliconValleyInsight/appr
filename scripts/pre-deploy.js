@@ -1,11 +1,11 @@
-const utils = require("./utils");
 const config = require("./config");
+const utils = require("./utils");
 
 module.exports = function preDeploy() {
   const pkg = utils.readPackageJSON();
-  const name = utils.getExpPublishName(pkg.name, config.githubPullRequestId);
+  const name = utils.getSafeName(pkg.name);
+
   const modified = Object.assign({}, pkg, {
-    name,
     privacy: "unlisted"
   });
 

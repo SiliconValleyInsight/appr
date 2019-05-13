@@ -1,6 +1,6 @@
 {
   "name": "appr",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "Pull Request Review Apps for create-react-native-app / Expo",
   "main": "index.js",
   "scripts": {
@@ -32,8 +32,10 @@
     "eslint-plugin-import": "^2.2.0"
   },
   "dependencies": {
-    "exp": "^46.0.5",
-    "expo-cli": "^2.17.1",
     "request": "^2.81.0"
+  },
+  "peerDependencies": {
+    "exp": ">= 48",
+    "expo-cli": "^2.17.1"
   }
 }
